@@ -38,13 +38,14 @@ class main
 
         stopwatch.Start();
         Thread.Sleep(5000);
-        stopwatch.Stop();
+        Program ats = new Program();
+        ats.skaiciavimas();
+
+                stopwatch.Stop();
 
         TimeSpan ts = stopwatch.Elapsed;
 
         Console.WriteLine("Elapsed Time is {0:00}:{1:00}:{2:00}.{3}",
-                        ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds);
-        Program ats = new Program();
-        ats.skaiciavimas();
+            ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds);
     }
 }
